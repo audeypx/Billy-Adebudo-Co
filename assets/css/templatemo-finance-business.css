@@ -94,7 +94,7 @@ a.border-button:hover {
 .section-heading span {
 	display: block;
 	margin-top: 15px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-size: 15px;
 	color: #666;
 	letter-spacing: 1px;
@@ -683,16 +683,107 @@ ul.slick-dots {
 }
 
 
+
+
 /* CLIENT SECTION */
-.clients{
-	font-family: 'Droid Serif', serif;
+.clients {
+	margin-top: 10rem;
 }
 
-h1 {
-	font-size: 60px;
+.clients-wrapper {
+	height: 100%;
+	overflow: hidden;
+}
+
+.clients-container {
+	width: 500px;
+	height: 200px;
+	margin: auto;
+	position: relative;
+}
+
+.clients-slider {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/* Making the ul and li elements take full width and height */
+.clients-slider ul,
+.clients-slider ul li {
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-device-width: 428px) {
+
+	.clients-slider ul,
+	.clients-slider ul li {
+		width: 90%;
+		height: 100%;
+	}
+}
+
+/* Positioning the ul and adding the transition */
+.clients-slider ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: top 1s;
+}
+
+/* Styling each slide */
+.clients-slider ul li {
 	text-align: center;
-  }
-  
+	/* line-height: 70vh; */
+	/* Using vh for full height centering */
+	font-size: 30px;
+	color: #000;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+/* Positioning and styling the indicators */
+.clients-slider ol {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+}
+
+.clients-slider ol li {
+	width: 7px;
+	height: 30px;
+	margin-bottom: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Pseudo-element for the hover effect */
+.clients-slider ol li::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background: #eee;
+	transition: height 0.3s;
+}
+
+/* Animating the pseudo-element on hover and when active */
+.clients-slider ol li:hover::before,
+.clients-slider ol li.clients-active::before {
+	height: 100%;
+}
+
+/* 
   .content-slider {
 	width: 100%;
 	height: 360px;
@@ -727,7 +818,9 @@ h1 {
   
   .slider .quote {
 	font-size: 40px;
-	font-style: italic;
+	/* font-style: italic; 
+	text-align: center;
+	font-weight: bold;
   }
   
   .slider .source {
@@ -752,6 +845,30 @@ h1 {
   }
   
   .slider li.anim5 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim6 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim7 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim8 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim9 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim10 {
+	animation: cycle5 15s linear infinite;
+  }
+
+  .slider li.anim11 {
 	animation: cycle5 15s linear infinite;
   }
   
@@ -948,7 +1065,8 @@ h1 {
   }
 
 
-/* Client 1 - HCF Bootstrap 5 Component */
+
+/* Client 1 - HCF Bootstrap 5 Component *
 .g-6,
 .gx-6 {
   --bs-gutter-x: 6rem;
@@ -1058,7 +1176,7 @@ h1 {
     padding-top: 4.5rem !important;
     padding-bottom: 4.5rem !important;
   }
-}
+} */
 
 
 
